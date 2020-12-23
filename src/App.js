@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React from "react"
+import GlobalStyles from "./components/GlobalStyles"
+import Home from "./pages/Home"
+import { Route } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Ignite</h1>
+      <GlobalStyles />
+      <Route path={["/game/:id","/"]}>
+        <Home />
+      </Route>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
